@@ -1,36 +1,24 @@
-<!--
-**BionicApe/BionicApe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-
-# Bionic Ape S.L.
-
 # MetaVersus World
 
-We are currently working on implementing features from MetaSuite and updating to Unreal Engine 5
+We are currently working on implementing features from **MetaSuite** and updating to **Unreal Engine 5**.
 
-###Features from MetaSuite
+### Features to implement from MetaSuite
 
-1. User Authentication
+1. Player Authentication
 2. Character Creation
 3. Cleaning Blueprint code and translating it into C++
+4. Increasing performance by tweaking replication
 
-###Updating the project to Unreal Engine 5
+### Unreal Engine 5
+
+1. Remove Unreal Engine 4 Dependencies
+2. Convert assets to **Nanite**
+3. Adjust Lighting for **Lumen**
 
 
 ## Player Authentication
 
-We are integrating the current authentication via Cognito to implement the interfaces of OnlineSubsystem. The Engine is fully integrated with this set of interfaces and other systems such as Epic Games, Steam, iOS, Android or Facebook make use of this set of Interfaces implemented in one Moudule.
+We are developing an authentication that implements the interfaces of OnlineSubsystem. The Engine is fully integrated with this set of interfaces and other systems such as Epic Games, Steam, iOS, Android or Facebook make use of this set of Interfaces implementing them in one Module. Also, as part of this integration, we will be moving the Cognito login implementation to a Backend Cognito login implementation so we remove the current AWS SDK C++ Third Party dependency.
 
 ## Character Creation Integration
 
@@ -41,10 +29,9 @@ We are integrating the current authentication via Cognito to implement the inter
 - Facilitates future integration with NFTs
 - Ready Player Me Integration
 
-## Worlds
+### Cleaning Blueprint code and translating it into C++
 
-- Fashion World
-- 
+After prototyping quickly, we are in need of doing some cleaning and increase the performance and maintainability of some already created systems that prevent us from having a good performance and are prone to crash.
 
 ## Product Release Stage: 
 Closed alpha (Q4 2022)
@@ -60,8 +47,52 @@ Unreal Engine 5's fully dynamic global illumination and reflections system that 
 
 Unreal Engine 5's virtualized geometry system which uses a new internal mesh format and rendering technology to render pixel scale detail and high object counts. It intelligently does work on only the detail that can be perceived and no more. Nanite's data format is also highly compressed, and supports fine-grained streaming with automatic level of detail.
 
-# Dependencies
+## Worlds
 
+- MetaCity
+- WestWorld "Wild West" City
+- Fashion Verse
+- AutoVerse
+- CityHall
+
+# Dependencies (C++)
+
+- MetaverseAPI
+- OnlineSubsystemMetaverse
+- BAMultiplayer
+- BAMultiplayerUI
+- BionicApeCore
+- CharacterCreation
+- FocusInteractions
+- InventorySystem
+- OnlineSubsystemBANull (Only editor)
+- SkeletalMeshMerger
+- awsSDK (To be removed)
+- GraphQL
+- BlueprintJson (To be removed)
+- LoadingScreen
+- UniversalVoiceChatPro
+- AsyncLoadingScreen
+- DBBrowser
+- glTFRuntime
+- CompilerBooster (Only Editor)
+- PixelStreaming
+- AWSCore (To be removed)
+- CognitoIdentity
+- CognitoIdp
+- DynamoDB (To be removed)
+- DynamoDBStreams (To be removed)
+- GameLift (To be removed)
+- GameLiftServerSDK (To be removed)
+- Lambda (To be removed)
+- AWSCoreLibrary (To be removed)
+- CognitoIdentityClientLibrary (To be removed)
+- CognitoIdpClientLibrary (To be removed)
+- DynamoDBClientLibrary (To be removed)
+- DynamoDBStreamsClientLibrary (To be removed)
+- GameLiftClientLibrary (To be removed)
+- GameLiftServerLibrary (To be removed)
+- LambdaClientLibrary (To be removed)
 
 # Downloadable client
 
